@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Using a CDN with a Fallback</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+	<!--If CDN is down, here is the fallback-->
+	<script>
+		window.jQuery || document.write("<script src='../js/jquery-1.11.2.js'><\/script>");
+	</script>
+    <script src='script.js'></script>
+</head>
+<body>
+	<div id="emailContainer">
+        <div class="panel">
+        </div>
+        <div class="panel">
+        </div>   
+    </div>
+    <div id="ordersContainer">
+        <div class="panel">
+        </div>
+        <div class="panel">
+        </div>   
+    </div>
+</body>
+</html>
