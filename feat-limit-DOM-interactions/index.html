@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Limit DOM Interactions</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <script>
+        window.jQuery || document.write("<script src='../js/jquery-1.11.2.js'><\/script>");
+    </script>
+    <script src='script.js'></script>
+</head>
+<body>
+    <p>Limit DOM interactions by string concatenation rather than using append within a loop</p>
+    <br />
+    <button id="btnLoadCustomers">Load Customers</button>
+    <p>Time (millis): <span id="diff"></span></p>
+    <div id="container">
+        <table id="tblCustomer">
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Address</td>
+                <td>City</td>
+                <td>State</td>
+            </tr>
+            <tbody></tbody>
+        </table>
+    </div>
+</body>
+</html>
