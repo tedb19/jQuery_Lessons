@@ -5,6 +5,7 @@
 * So if you want to use this callback function/event handler, you must have
 * a 'li a' selector under the 'members' selector, and you must invoke the click event.
 * This is important when you are adding ellements dynamically onto the DOM
+* More info: http://learn.jquery.com/events/event-delegation/
 */
 $("#members").on("click","li a", function (e) {
     e.preventDefault();
