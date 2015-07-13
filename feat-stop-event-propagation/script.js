@@ -1,11 +1,3 @@
-/* Here, we store the metadata information on the 'members' selector, i.e. event delegation.
-* Attach a single event listener, to the parent element (#members), that will fire for all descendants matching
-* the specified selector (li a)
-* So if you want to use this callback function/event handler, you must have
-* a 'li a' selector under the 'members' selector, and you must invoke the click event.
-* This is important when you are adding ellements dynamically onto the DOM
-* More info: http://learn.jquery.com/events/event-delegation/
-*/
 var $members = $("#members");
 
 // Attach a directly bound event handler to 'members'
@@ -13,9 +5,7 @@ $members.on("click", function (e) {
     toastr.success(this.tagName, "Click");
 });
 
-/* Here we are adding a new 'li a' under 'members', and we want it to have the same event-handler 
-* on its click event
-*/
+/*Now how do we prevent the members click event from getting fired, when we click one of the 'li a' ?*/
 $members.find("li a")
   .on("click", function (e) {
     e.preventDefault();
