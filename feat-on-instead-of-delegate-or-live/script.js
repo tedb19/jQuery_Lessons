@@ -1,7 +1,6 @@
 /* Here, we store the metadata information on the 'members' selector, i.e. event delegation.
-* So basically, here we are saying that we want a selector that looks like 
-* 'li a' that is under #members, and we want to match the event (click)
-* and we want to invoke the handler too.
+* Attach a single event listener, to the parent element (#members), that will fire for all descendants matching
+* the specified selector (li a)
 * So if you want to use this callback function/event handler, you must have
 * a 'li a' selector under the 'members' selector, and you must invoke the click event.
 * This is important when you are adding ellements dynamically onto the DOM
