@@ -5,6 +5,9 @@
 * a 'li a' selector under the 'members' selector, and you must invoke the click event.
 * This is important when you are adding ellements dynamically onto the DOM
 * More info: http://learn.jquery.com/events/event-delegation/
+* Only the container, i.e. 'members', has been given the instruction;
+* it is responsible for noticing clicks on behalf of its child elements. 
+* The work of catching events has been delegated.
 */
 $("#members").on("click","li a", function (e) {
     e.preventDefault();
