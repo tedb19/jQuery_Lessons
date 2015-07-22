@@ -1,0 +1,38 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery ajax promises</title> 
+    {% block styling %}
+      <link rel = "stylesheet" href = "{% static 'css/style.css' %}">
+    {% endblock styling %}
+</head>
+<body>
+    <div class="content-wrapper">
+        <a id="getCustomers" href="#">Get Customers</a>
+        <a id="updateCustomers" href="#">Update Customer</a>
+        <a id="insertCustomers" href="#">Insert Customer</a>
+        <a id="deleteCustomers" href="#">Delete Customer</a>
+        <a id="getCustomerOrders" href="#">Get Customer Orders</a>
+        <a id="getCustomerJSONP" href="#">Get Customer via JSONP</a>
+
+        <br />
+
+        <h4>Customers:</h4>
+        <ul id="customersContainer"></ul>
+
+        <h5>Orders:</h5>
+        <ul id="ordersContainer"></ul>
+        <br />
+        <div id="outputDiv"></div>
+    </div>
+
+    {% block javascript %}
+        <script src = "{% static 'js/jquery-1.11.2.js' %}"></script>
+        <script src = "{% static 'js/script.js' %}"></script>
+        <script src = "{% static 'js/dataService.js' %}"></script>
+    {% endblock javascript%}
+
+</body>
+</html>
