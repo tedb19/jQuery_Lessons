@@ -1,0 +1,29 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Using $.when() to resolve multiple ajax calls</title> 
+    {% block styling %}
+      <link rel = "stylesheet" href = "{% static 'css/style.css' %}">
+    {% endblock styling %}
+</head>
+<body>
+    <h1>Using $.when() to resolve multiple ajax calls</h1>
+
+    <div id="content">
+        <button id="displayResults">Display Results</button>
+        <p>Name: <span id="customerName"></span></p>
+        <p>Order Count: <span id="orderCount"></span></p>
+    </div>
+
+    {% block javascript %}
+        <script src = "{% static 'js/jquery-1.11.2.js' %}"></script>
+        <script src = "{% static 'js/utilities.js' %}"></script>
+        <script src = "{% static 'js/dataService.js' %}"></script>
+        <script src = "{% static 'js/orderDataService.js' %}"></script>
+        <script src = "{% static 'js/script.js' %}"></script>
+    {% endblock javascript%}
+
+</body>
+</html>
