@@ -1,22 +1,15 @@
+$("#getCustomers").on("click", function () {
+  getCustomers();
+});
 
-var urlBase = 'customers/api';
+$("#updateCustomers").on("click", function () {
+  updateCustomer();
+});
 
+$("#insertCustomers").on("click", function () {
+  addCustomer();
 
-
-  $("#getCustomers").on("click", function () {
-    getCustomers();
-  });
-
-  $("#updateCustomers").on("click", function () {
-    updateCustomer();
-  });
-
-  $("#insertCustomers").on("click", function () {
-    addCustomer();
-
-  });
-
-
+});
 
 
 function addCustomer() {
